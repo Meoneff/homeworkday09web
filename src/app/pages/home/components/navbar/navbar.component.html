@@ -22,8 +22,6 @@
 
 </div>
 <div class="adminInfo">
-    <div (click)="toAdmin()" style="display: flex; align-items: center; justify-content: center; cursor: pointer;">
-        <mat-icon>settings</mat-icon></div>
     <div (click)="toAdmin()" id="in4User" class="box" *ngIf="this.userInfoService.userInfo.value?.name">
         <p>{{this.userInfoService.userInfo.value?.name}}</p>
     </div>
