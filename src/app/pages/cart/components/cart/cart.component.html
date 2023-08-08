@@ -1,0 +1,75 @@
+<!-- <div id="navbar" style="height: 45px;"> -->
+<app-navbar></app-navbar>
+<!-- </div> -->
+
+
+
+<div class="main">
+  <h1 style=" text-align: center; margin-top: 40px;">Shopping Cart</h1>
+    <div class="container">
+            <div class="total">
+        <div>Tổng cộng: {{total$ | async}}
+          <button (click)="purchase()" class="btnpurchase">Mua Hàng</button>
+        </div>
+        <button  (click)="clearAllCart()" class="btnclearall">Xoá tất cả</button>
+    </div>
+
+    <table class="table"  *ngIf="cartList$">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Stock</th>
+          <th scope="col">imgSrc</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+   
+        <tr *ngFor="let item of cartList$ | async">
+   
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.stock}}</td>
+          <td><img src="{{item.imgSrc}}"></td>
+          <td>{{ item.price * item.stock }}</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+
+     
+    </div>
+</div>
+<div id="footer" style="margin-top: 50%">
+<app-footer></app-footer>
+</div>
+
+        <!-- <div class="item" *ngFor="let item of cartList$ | async" style="box-shadow: 0px 0px 7px #D2D2D2;">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>{{item.name}}</mat-card-title>
+                  <mat-card-subtitle>Giá: {{item.price}} - Số lượng:{{item.stock}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{item.imgSrc}}" alt="ảnh áo">
+                <mat-card-content>
+                  <p style="align-items: center;">
+                    Mô tả: {{item.description}}
+                  </p>
+                </mat-card-content>
+                <div class="containerbtn">
+                    <div>
+                        <button mat-button (click)="addItemToStock(item)" class="btn">thêm</button>
+                      </div>
+                      <div>
+                          <button mat-button (click)="removeItemFromStock(item)" class="btn">bớt</button>
+                        </div>
+                        <div>
+                          <button mat-button (click)="removeItemFromCart(item)" class="btn">xoá</button>
+                        </div>
+                </div>
+              </mat-card>
+        </div> -->

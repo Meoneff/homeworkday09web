@@ -1,0 +1,31 @@
+<div id="navbar">
+<app-navbar></app-navbar>
+</div>
+<div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="item" *ngFor="let item of itemList$ | async">
+            <mat-card class="example-card">
+              <img mat-card-image src="{{item.imgSrc}}" alt="ảnh áo">
+                <mat-card-header>
+                  <mat-card-title>{{item.name}}</mat-card-title>
+                  <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+                  <p>
+                    {{item.description}}
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button class="btnall" mat-button (click)="addItemToCart(item)">Thêm vào giỏ</button>
+
+                </mat-card-actions>
+              </mat-card>
+        </div>
+      </div>
+    </div>
+</div>
+<div id="footer" style="margin-top: 50%">
+<app-footer></app-footer>
+</div>

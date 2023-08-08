@@ -1,0 +1,88 @@
+<div class="topheader">
+    <div class="mainheader">
+        <div class="leftheader">
+            <span style="margin-right: 6px;">Hotline: </span>
+            <a href="0933.782.768" style="color: white;">
+                0933.782.768
+            </a>
+        </div>
+        <div class="rightheader" style="color: white; margin-right: 12px;">
+            <div (click)="login()">
+                <a style="color: white; margin-right: 12px;"> Đăng Nhập</a>
+            </div>
+            <div (click)="login()">
+                <a style="color: white; margin-right: 12px;"> Đăng Ký</a>
+            </div>
+
+            <div>
+                <a style="color: white; margin-right: 12px;"> Liên Hệ </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="adminInfo">
+    <div (click)="toAdmin()" style="display: flex; align-items: center; justify-content: center; cursor: pointer;">
+        <mat-icon>settings</mat-icon></div>
+    <div (click)="toAdmin()" id="in4User" class="box" *ngIf="this.userInfoService.userInfo.value?.name">
+        <p>{{this.userInfoService.userInfo.value?.name}}</p>
+    </div>
+    <div (click)="logout()" *ngIf="isLogin"
+        style="display: flex; align-items: center; justify-content: center; cursor: pointer;">
+        <mat-icon>logout</mat-icon>
+    </div>
+</div>
+
+
+<div class="imagelogo">
+    <a href="https://nowsaigon.com/">
+        <img src="https://bizweb.dktcdn.net/100/318/614/themes/667160/assets/logo.png?1681444077990">
+    </a>
+</div>
+<hr>
+<div class="searchmenu">
+    <div class="menubar">
+        <a [routerLink]="['/home']">
+            <span>HOME</span>
+        </a>
+
+        <select class="custom-select" style="border: none">;
+            <option value="0">CLOTHING</option>
+            <option value="1">ALL ITEMS</option>
+            <option value="2">TEE</option>
+            <option value="3">BABY TEE</option>
+            <option value="4">BOTTOM</option>
+            <option value="5">JACKET</option>
+            <option value="6">HOODIE</option>
+            <option value="7">SWEATER</option>
+            <option value="8">CAP</option>
+            <option value="9">CLOTHING</option>
+            <option value="10">HOODIE</option>
+            <option value="11">SHIRT</option>
+            <option value="14">SALE</option>
+
+        </select>
+        <a href="https://nowsaigon.com/contact" style="margin-left: 30px;">
+            <span>CONTACT</span>
+        </a>
+        <a href="https://nowsaigon.com/clearance-sale" class="clear" style="background-color: red; ">
+            <span>CLEARANCE-SALE</span>
+        </a>
+    </div>
+    <div class="iconmenu">
+        <div class="search_inner" style="margin-right: 40px; ">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search">search</mat-icon>
+            <span>Tìm kiếm</span>
+        </div>
+
+        <div class="carticon">
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+                [routerLink]="['/cart']">
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <span>Giỏ</span>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div id="navbar">
+  <app-navbar></app-navbar>
+</div>
+<div class="main">
+  <div class="container">
+    <div class="containerinput">
+      <h2 style="align-items: center;">Thêm sản phẩm</h2>
+      <form class="form" [formGroup]="additemForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter name" />
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" class="form-control" id="price" formControlName="price" placeholder="Enter price" />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="string" class="form-control" id="description" formControlName="description"
+            placeholder="Enter description" />
+        </div>
+        <div class="form-group">
+          <label for="imgSrc">Image</label>
+          <input type="text" class="form-control" id="imgSrc" formControlName="imgSrc" placeholder="Enter image" />
+        </div>
+      </form>
+    </div>
+    <div class="containerbtn"><button class="btnadd" (click)="addItem(additemForm.value)">Thêm sản phẩm</button></div>
+
+    <table class="table" *ngIf="itemList$">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">imgSrc</th>
+          <th scope="col">Chi Tiết</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let item of itemList$ | async">
+
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+          <td>{{item.price}}</td>
+          <td><img src="{{item.imgSrc}}"></td>
+          <td><button style="font-size: 20px;" (click)="deleteItem(item._id)" class="btndel">Xoá</button></td>
+          <td><button style="font-size: 20px;" (click)="openDialog(item)" class="btndel">Sửa Thông Tin</button></td>
+        </tr>
+      </tbody>
+
+    </table>
+
+
+  </div>
+  <div id="footer" style="width: 100%; margin-top: 50%">
+    <app-footer></app-footer>
+  </div>

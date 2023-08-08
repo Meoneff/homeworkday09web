@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webnowsaigon": {
+      "hosting": {
+        "homework05": [
+          "webnowsaigon"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webnowsaigon"
+  }
+}

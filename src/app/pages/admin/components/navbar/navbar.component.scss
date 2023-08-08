@@ -1,0 +1,150 @@
+.mainheader{
+  color: white;
+}
+a {
+    text-decoration: none;
+    color: black;
+  }
+.topheader {
+    display: flex;
+    width: 100%;
+    background: #363636;
+    height: 45px;
+    flex-direction: column;
+  }
+  .mainheader {
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    justify-content: space-between;
+    width: auto;
+    height: 100%;
+  }
+  .rightheader {
+    display: flex;
+    justify-content: end;
+    width: auto;
+    height: 100%;
+    align-items: center;
+  }
+  .leftheader {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: auto;
+    height: 100%;
+  }
+  .imagelogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+  
+  .searchmenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .iconmenu {
+    display: flex;
+    justify-content: end;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  .menubar a {
+    font-size: 20px; 
+    padding: 0px 30px;
+
+  }
+  .custom-select {
+    background: transparent;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; 
+    border: none;
+  }
+  .clear {
+    margin: 10px;
+    font-size: 18px; 
+  }
+  .searchmenu a:nth-child(3) {
+  font-size: 18px; 
+}
+.searchmenu a:nth-child(4) {
+  font-size: 18px; 
+  padding: 5px 10px; 
+  border: 2px solid red; 
+  border-radius: 5px; 
+  background-color: transparent; 
+}
+.menubar a:first-child {
+  font-size: 18px; 
+}
+
+
+dialog {
+  text-align: center;
+  background-color: pink;
+  border: none;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  max-width: 80%;
+}
+
+
+dialog[open] {
+  animation: toggle-modal 0.3s ease-in-out;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog h2 {
+  margin: 0 0 30px;
+  color: black;
+}
+.form-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+dialog{
+  button{
+    color:black
+  }
+}
+.form-control{
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+#tit{
+  margin-right: 10px;
+}
+.adminInfo {
+  display: flex;
+  align-items: center;
+}
+
+.adminInfo div {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#in4User {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#in4User p {
+  margin: 0;
+}

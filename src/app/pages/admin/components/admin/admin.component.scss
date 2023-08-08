@@ -1,0 +1,122 @@
+.main {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-self: center;
+    flex-wrap: wrap;
+    height: 95%;
+}
+.table {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  img{
+    height: 200px;
+    width: 200px;
+  }
+
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-self: center;
+    flex-wrap: wrap;
+    margin-bottom: 250px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+.containerinput {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 60px;
+    padding-right: 170px;
+    padding-left: 170px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.containerinput h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.containerbtn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btnadd {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color:darkred;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnadd:hover {
+    background-color: yellow;
+    color: black
+}
+
+  .btndel{
+    width: 200px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid black;
+  }
+  .btndel:hover{
+    width: 200px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+  }

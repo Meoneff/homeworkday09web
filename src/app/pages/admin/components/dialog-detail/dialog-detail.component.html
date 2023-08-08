@@ -1,0 +1,45 @@
+<form class="form" [formGroup]="additemForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+        placeholder={{this.item.name}}
+      />
+    </div>
+    <div class="form-group">
+      <label for="price">Price: </label>
+      <input
+        type="number"
+        class="form-control"
+        id="price"
+        formControlName="price"
+        placeholder={{this.item.price}}
+      />
+    </div>
+    <div class="form-group">
+        <label for="description">Description: </label>
+        <input
+          type="string"
+          class="form-control"
+          id="description"
+          formControlName="description"
+          placeholder={{this.item.description}}
+        />
+      </div>
+      <div class="form-group"><img src="{{this.item.imgSrc}}" alt=""></div>
+    <div class="form-group">
+      <label for="imgSrc">Image: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="imgSrc"
+        formControlName="imgSrc"
+        placeholder="{{this.item.imgSrc}}"
+      />
+    </div>
+    <div class="form-group"><button (click)="deleteItem(item._id)">Xóa</button></div>
+    <div class="form-group"><button (click)="updateItem(additemForm.value)">Chỉnh sửa</button></div>
+  </form>
