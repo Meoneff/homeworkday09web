@@ -23,6 +23,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
+    
   ]
 })
 export class HomeModule { }

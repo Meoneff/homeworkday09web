@@ -30,6 +30,7 @@
     <div (click)="toAdmin()" id="in4User" class="box" *ngIf="this.userInfoService.userInfo.value?.name">
         <p>{{this.userInfoService.userInfo.value?.name}}</p>
     </div>
+    <img src="{{this.userInfoService.userInfo.value?.imgSrc}}" style="border-radius: 50%; height: 30px; width: 30px; margin-left: 10px">
 </div>
 
 
