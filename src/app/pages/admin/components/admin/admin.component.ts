@@ -69,7 +69,7 @@ export class AdminComponent implements OnInit {
   }
   addItem(item: Item) {
     if(!(item.name)||!(item.description)||!(item.price)||!(item.imgSrc)){
-      alert("nhập vào chi tiết sản phẩm đi thiếu kìa ")
+      alert("ngu ơi thấy thiếu gì không ! ")
     }
     else{
       this.store.dispatch(ItemAction.additem({ item }))
